@@ -1,1 +1,1 @@
-# mangaEvreni.github.io
+# MangaEvreni.github.io
