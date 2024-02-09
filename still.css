@@ -1,0 +1,204 @@
+body{
+    background-image: url(res/bg4.jpg);
+}
+#container{
+    width: auto;
+    height: auto;
+    margin: auto;
+
+}
+header img{
+    width: auto;
+    height: 100px;
+    
+}
+header{
+    height: auto;
+    width: auto;
+    
+   
+}
+nav{
+    width: auto;
+    height: 50px;
+    background-color: #830000;
+}
+nav ul{
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+nav ul li{
+    float: left;
+    color: white;
+}
+nav ul li a{
+    font-size: 15px;
+    font-weight: bold;
+    color: #e5edfa;
+    text-align: center;
+    width: 100px;
+    margin-top: 15px;
+    margin-left: 40px;
+    display: block;
+    text-decoration: none;
+    margin-left: 100px;
+}
+nav ul li a:hover{
+    border-bottom: 4px solid red;
+    color:  red;
+    
+}
+section{
+    width: 1200px;
+    height: 3500px;
+    margin: auto;
+    margin-top: 50px;
+}
+footer{
+    background-color: rgb(33, 32, 32);
+    width: auto;
+    height: 200px;
+    margin: auto;
+    text-align: center;}
+    
+ aside{
+    background-color: rgb(33, 32, 32) ;
+    width: 100px;
+    height: 100px;
+}
+
+#mngLst{
+    background-color: rgb(33, 32, 32);
+    float: right;
+    width: 300px;
+    height: 1500px;
+    margin-left: 25px;
+    margin-top: 100px;
+}
+#mngP{
+    width: 875px;
+    height: 300px;
+    background-color: rgb(33, 32, 32);
+    float: left;
+    font-size: 17px;
+    line-height: 10px;
+    font-weight: bold;
+    font-family: Lucida Calligraphy;
+    color: white;
+    margin-right: 25px;
+    margin-bottom: 100px;
+}
+#manga{
+    margin-top: 100px;
+    width: 875px;
+    height: 2500px;
+    float: left;
+}
+article{
+    float: left;
+    width: 875px;
+    height: 300px;
+    background-color: rgb(33, 32, 32);
+    margin-bottom: 5px;
+}
+.mngrsm{
+    width: 150px;
+    height: 250px;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 25px;
+    margin-top: 25px;
+
+}
+.yazi{
+    color: white;
+    width: 650px;
+    height: 300px;
+    float:right;
+
+}
+.mngrsm img{
+    width: 150px;
+    height: 250px;
+}
+h1{
+    padding: 0px;
+    margin: 0px;
+    font-family: Lucida Calligraphy;
+    color: white;
+}
+#mngB{
+    width: 300px;
+    height: 380px;
+    float: left;
+}
+.mngBaslik{
+    font-size: 30px;
+}
+.mngBolum{
+    font-size: 15px;
+    list-style-type: none;
+    padding: 0;
+    
+}
+.mngBolum li{
+    margin: 0 10px;
+    display: block;
+}
+.mngBolum li a{
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    width: 100px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+.tanim{
+    color: white;
+    width: 450px;
+    height: 200px;
+    float:right;
+    line-height: 25px;
+    text-align: justify;
+    padding: 10px;
+}
+#hak{
+    color: white;
+    float: left;
+}
+pre{
+    font-size: 12px;
+    text-align: justify;
+    margin-top: 100px;
+}
+#sayfa{
+    width: 600px;
+    height: 40px;
+    background-color: #170101;
+    float: right;
+    margin-top: 200px;
+}
+#sayfa a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(28, 28, 28);
+    text-align: center;
+    float: left;
+    text-decoration: none;
+    color: rgb(217, 214, 214);
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#sayfa a:hover{
+    background-color: rgb(60, 60, 60);
+    color: white;
+}
+

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga evreni/ AnaSayfa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .slide img {
+            width: 875px;
+            height: 450px;
+            display: block;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .arrow:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .text-container {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .mngBolum li a:hover{
+            background-color: #830000;
+        }
+        
+
+        
+    </style>
+    <link rel="stylesheet" href="still.css">
+</head>
+<body>
+    <div id="container">
+        <header><img src="res/banner3.jpg" alt=""></header>
+        
+        <nav>
+            <ul>
+                <li><a href="anaSayfa.html"> AnaSayfa</a></li>
+                <li><a href="seriler.html">Seriler</a></li>
+                <li><a href="Turler.html">Türler</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+        <section>
+            <aside id="mngP">
+
+                <div class="slider-container">
+                    <div class="slider-wrapper">
+                        <div class="slide">
+                           <a href="mngBolum.html"><img src="res/Berserk_2.jpg" alt="Slide 1"></a> 
+                        </div>
+                        <div class="slide">
+                            <a href="mngBolum.html"><img src="res/jujutsuKaisen.png" alt="Slide 2"></a>
+                        </div>
+                        <div class="slide">
+                           <a href="mngBolum.html"><img src="res/tokyoGhoul.webp" alt="Slide 3"></a> 
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <p>Önerilen mangalarımız</p>
+                    </div>
+                    <div class="arrow prev">&#10094;</div>
+                    <div class="arrow next">&#10095;</div>
+                </div>
+            
+                <script>
+                    const wrapper = document.querySelector('.slider-wrapper');
+                    const slides = document.querySelectorAll('.slide');
+                    const prev = document.querySelector('.prev');
+                    const next = document.querySelector('.next');
+            
+                    let currentIndex = 0;
+            
+                    next.addEventListener('click', () => {
+                        currentIndex = (currentIndex + 1) % slides.length;
+                        updateSlider();
+                    });
+            
+                    prev.addEventListener('click', () => {
+                        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                        updateSlider();
+                    });
+            
+                    function updateSlider() {
+                        const newTransformValue = -currentIndex * 100 + '%';
+                        wrapper.style.transform = 'translateX(' + newTransformValue + ')';
+                    }
+                </script>
+
+
+
+            </aside>
+            <aside id="mngB"><h1>Best manga</h1> <hr color="#170101"><img src="res/demonSlayerKapak.webp" style="width: 300px; height: 380px;"></aside>
+            <aside id="mngLst">
+                <h1>reklam alanı</h1>
+            </aside>
+            
+           <pre id="hak">
+            <h1>Hakkımızda</h1>
+            <hr>
+                Web sitemize hoşgeldiniz! mangalarını getirmeye çalışıyoruz.
+                Web sitemizi her gün güncelliyoruz. Web sitemizi kullanımı kolay olacak şekilde tasarladık.
+                Sitemizde sorunsuzca kasma donma olmadan,
+                can sıkıcı reklamlar olmadan (reklam şuan yok eklemedik eklesek bile minimum düzeyde olacaktır)
+                manga okuyabilirsiniz.
+                Takip ettiğiniz manganın yeni bölümlerinden haberdar olmak için siteye kayıt olup
+                giriş yapıp favorilerinize ekleyebilirsiniz.
+                Web sitemizde bir hata ile karşılaşırsanız veya herhangi bir öneriniz varsa iletişim sayfamızdan bize 
+                ulaşabilirsiniz.
+
+                <h1>Site manga çevirisi yapıyor mu?</h1>
+
+                evet, çeviri yapılıyor ama çok küçük çalplı bir çeviri ekibine sahibiz(sadece ben xd)
+                yadımcı olmak isterseniniz dc sunucumuza gelebilirsiniz
+
+                <h1>Okuduğum manganın yeni bölümleri ne zaman yayınlanacak?</h1>
+
+                Bunu bilmiyoruz. Çeviri grubunun ne zaman yayınladığına göre veya manganın çıkış gününe göre değişkenlik 
+                gösterebilir.
+
+                <h1>Takip ettiğim manga neden uzun zamandır güncellenmiyor?</h1>
+
+                Muhtemelen çeviri grubu artık mangayı çevirmeyi bıraktığından veya manga ara verdiğinden olabilir.
+
+                <h1>Manganın çevirisi neden yanlış veya eksik?</h1>
+
+                Edit/çeviri sırasında hata yapılmış olabilir. Okumayı engelleyecek kadar hata varsa çeviri grubu ile 
+                iletişime geçin.
+
+                <h1>Neden istediğim manga sitenizde yok?</h1>
+
+                Yeni bir manganın siteye kaydedilmesi için her gün sayısız talepte bulunuluyor,
+                bu nedenle kaydedilmesi biraz zaman alabilir. İstediğiniz manga herhangi bir çeviri grubu tarafından 
+                çevrilmemişse,
+                yayınlanamaz.
+
+                <h1>Nasıl daha hızlı online manga okuyabilirim?</h1>
+
+                Google Chrome tarayıcısını kullanın, sitemizin desteklediği en iyi tarayıcıdır ve bu son derece hızlı 
+                okuma sağlar.
+                </pre>
+</section>
+        <footer><h1>Not
+            Bu sitedeki mangaları daha kolay okuyabilmeniz için türkçe paylaşmaya çalışıyoruz. Burada gördüğünüz mangalardan herhangi birini beğendiyseniz ve satışta mevcutsa, yayıncıyı desteklemek için satın almanızı rica ediyoruz. Herhangi bir konuda bizimle iletişime geçmek için sitemizdeki iletişim formundan ulaşabilirsiniz.</h1></footer>
+    </div>
+</body>
+</html>
