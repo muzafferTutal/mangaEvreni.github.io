@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga evreni/ AnaSayfa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .slide img {
+            width: 875px;
+            height: 450px;
+            display: block;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .arrow:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .text-container {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .mngBolum li a:hover{
+            background-color: #830000;
+        }
+        footer h1{
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+        }
+
+        
+    </style>
+    <link rel="stylesheet" href="still.css">
+</head>
+<body>
+    <div id="container">
+        <header><img src="res/banner3.jpg" alt=""></header>
+        
+        <nav>
+            <ul>
+                <li><a href="anaSayfa.html"> AnaSayfa</a></li>
+                <li><a href="seriler.html">Seriler</a></li>
+                <li><a href="Turler.html">Türler</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+        <section>
+            <aside id="mngP">
+
+                <div class="slider-container">
+                    <div class="slider-wrapper">
+                        <div class="slide">
+                           <a href="mngBolum.html"><img src="res/Berserk_2.jpg" alt="Slide 1"></a> 
+                        </div>
+                        <div class="slide">
+                            <a href="mngBolum.html"><img src="res/jujutsuKaisen.png" alt="Slide 2"></a>
+                        </div>
+                        <div class="slide">
+                           <a href="mngBolum.html"><img src="res/tokyoGhoul.webp" alt="Slide 3"></a> 
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <p>Önerilen mangalarımız</p>
+                    </div>
+                    <div class="arrow prev">&#10094;</div>
+                    <div class="arrow next">&#10095;</div>
+                </div>
+            
+                <script>
+                    const wrapper = document.querySelector('.slider-wrapper');
+                    const slides = document.querySelectorAll('.slide');
+                    const prev = document.querySelector('.prev');
+                    const next = document.querySelector('.next');
+            
+                    let currentIndex = 0;
+            
+                    next.addEventListener('click', () => {
+                        currentIndex = (currentIndex + 1) % slides.length;
+                        updateSlider();
+                    });
+            
+                    prev.addEventListener('click', () => {
+                        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                        updateSlider();
+                    });
+            
+                    function updateSlider() {
+                        const newTransformValue = -currentIndex * 100 + '%';
+                        wrapper.style.transform = 'translateX(' + newTransformValue + ')';
+                    }
+                </script>
+
+
+
+            </aside>
+            <aside id="mngB"><h1>Best manga</h1> <hr color="#170101"><img src="res/demonSlayerKapak.webp" style="width: 300px; height: 380px;"></aside>
+            <aside id="mngLst">
+                <h1>reklam alanı</h1>
+            </aside>
+            <aside id="manga">
+                <h1>Son yüklenenler</h1>
+                <hr color="#170101">
+                <article>
+                    <aside class="yazi">
+                        <h1 class="mngBaslik"> <a href="mngBolum.html" style="text-decoration: none; color: white;">BERSERK</a></h1>
+                        <p class="tanim">Berserk mangasında çok çeşitli temalar ve konular işlenmektedir. Bunlar arasında en baskın konu özgür irade ve kader üzerine yapılan tartışmalardır. İnsan direnci, korkunç geçmişten gelen ve sürekli olarak adaletsiz bir dünyaya karşı mücadele eden birçok karakter tekrarlayan bir temadır.</p>
+                        <ul class="mngBolum">
+                            <li><a href="mngBolum.html">Bölüm 4</a></li>
+                            <li><a href="mngBolum.html">Bölüm 3</a></li>
+                            <li><a href="mngBolum.html">Bölüm 2</a></li>
+                            <li><a href="mngBolum.html">Bölüm 1</a></li>
+                        </ul>
+                    </aside>
+                    <aside class="mngrsm"><a href="mngBolum.html"><img src="res/berserk-1-kapak.webp" alt=""></a></aside>
+                </article>
+                <hr color="#170101">
+                <article>
+                    <aside class="yazi">
+                        <h1 class="mngBaslik"> <a href="mngBolum.html" style="text-decoration: none; color: white;">MUSHOKU TENSEİ</a></h1>
+                        <p class="tanim">Seri, üzücü ve münzevi bir hayat yaşadıktan sonra ölen ve anılarını saklarken hayal dünyasında yeniden dünyaya gelen ve pişmanlık duymadan yeni hayatının tadını çıkarmaya kararlı olan işsiz ve umutsuz bir adamı anlatmaktadır.</p>
+                        <ul class="mngBolum">
+                            <li><a href="mngBolum.html">Bölüm 4</a></li>
+                            <li><a href="mngBolum.html">Bölüm 3</a></li>
+                            <li><a href="mngBolum.html">Bölüm 2</a></li>
+                            <li><a href="mngBolum.html">Bölüm 1</a></li>
+                        </ul>
+                    </aside>
+                    <aside class="mngrsm"><a href="mngBolum.html"><img src="res/MushokuTenseiKapak.jpg" alt=""></a></aside>
+                </article>
+                <hr color="#170101">
+                <article>
+                    <aside class="yazi">
+                        <h1 class="mngBaslik"> <a href="mngBolum.html" style="text-decoration: none; color: white;">CHAİNSAW MAN</a></h1>
+                        <p class="tanim">Seri, alternatif bir tarihte vücudunu Pochita adlı köpeğe benzer bir iblisle birleştiren ve ona vücudunun bölümlerini elektrikli testerelere dönüştürme yeteneği veren bir sözleşme yapan yoksul genç bir adam olan Denji'nin hikayesini takip etmektedir.</p>
+                        <ul class="mngBolum">
+                            <li><a href="mngBolum.html">Bölüm 4</a></li>
+                            <li><a href="mngBolum.html">Bölüm 3</a></li>
+                            <li><a href="mngBolum.html">Bölüm 2</a></li>
+                            <li><a href="mngBolum.html">Bölüm 1</a></li>
+                        </ul>
+                    </aside>
+                    <aside class="mngrsm"><a href="mngBolum.html"><img src="res/chainsaw-man-2-kapak.webp" alt=""></a></aside>
+                </article>
+                <hr color="#170101">
+                <article>
+                    <aside class="yazi">
+                        <h1 class="mngBaslik"> <a href="mngBolum.html" style="text-decoration: none; color: white;">THE HORİZON</a></h1>
+                        <p class="tanim">İki çocuk kendilerini bir anda savaşın ortasında bulurlar ve beraber hiç ummadıkları bir yolculuğa çıkarlar. konusu kadar kendisi kadar kısa olup ama kendisinden beklenenden daha çok duyguyu aynı anda yaşata bilen sayılı serilerden, okuyun okutturun efenim.</p>
+                        <ul class="mngBolum">
+                            <li><a href="mngBolum.html">Bölüm 4</a></li>
+                            <li><a href="mngBolum.html">Bölüm 3</a></li>
+                            <li><a href="mngBolum.html">Bölüm 2</a></li>
+                            <li><a href="mngBolum.html">Bölüm 1</a></li>
+                        </ul>
+                    </aside>
+                    <aside class="mngrsm"><a href="mngBolum.html"><img src="res/TheHorizonKapak.jpg" alt=""></a></aside>
+                </article>
+                <hr color="#170101">
+                <article>
+                    <aside class="yazi">
+                        <h1 class="mngBaslik"> <a href="mngBolum.html" style="text-decoration: none; color: white;">TOKYO GHOUL</a></h1>
+                        <p class="tanim">Rize'nin iç organlarının kendisine nakledilmesiyle hayatta kalan Kaneki, yarı insan/ yarı gûl bir varlık olur. Yeni kimliğini kabullenemeyen Kaneki, kendini, gûlların peşindeki polisler, polislerin peşindeki terörist gûllar ve bu karmaşa arasında insanlarla huzur içinde yaşamak isteyen gûlların dünyasında bulur.</p>
+                        <ul class="mngBolum">
+                            <li><a href="mngBolum.html">Bölüm 4</a></li>
+                            <li><a href="mngBolum.html">Bölüm 3</a></li>
+                            <li><a href="mngBolum.html">Bölüm 2</a></li>
+                            <li><a href="mngBolum.html">Bölüm 1</a></li>
+                        </ul>
+                    </aside>
+                    <aside class="mngrsm"><a href="mngBolum.html"><img src="res/tokyo-gul-7-kapak.webp" alt=""></a></aside>
+                </article>
+                <hr color="#170101">
+                <article>
+                    <aside class="yazi">
+                        <h1 class="mngBaslik"> <a href="mngBolum.html" style="text-decoration: none; color: white;">DEMON SLAYER</a></h1>
+                        <p class="tanim">Antik çağlardan beri ormanların gizlenmiş insan yiyen iblislerler dolu olduğu efsanesi süregelmiştir. Bu efsaneler yüzünden kasaba halkı geceleri asla dışarıya çıkmamaktadır. Efsaneye göre bir iblis avcısı geceleri ortaya çıkmakta ve bu kana susamış iblisleri avlamaktadır.</p>
+                        <ul class="mngBolum">
+                            <li><a href="mngBolum.html">Bölüm 4</a></li>
+                            <li><a href="mngBolum.html">Bölüm 3</a></li>
+                            <li><a href="mngBolum.html">Bölüm 2</a></li>
+                            <li><a href="mngBolum.html">Bölüm 1</a></li>
+                        </ul>
+                    </aside>
+                    <aside class="mngrsm"><a href="mngBolum.html"><img src="res/demonSlayerKapak.webp" alt=""></a></aside>
+                </article>
+                <hr color="#170101">
+                <article>
+                    <aside class="yazi">
+                        <h1 class="mngBaslik"> <a href="mngBolum.html" style="text-decoration: none; color: white;">MADE İN ABYSS</a></h1>
+                        <p class="tanim">Seri, insansı bir robot olan Reg ile arkadaş olan ve onunla annesini bulma umuduyla Dünya'nın derinliklerine açılan Abyss adı verilen çukura inen öksüz bir genç kız Riko'nun etrafında dönmektedir. Kinema Citrus tarafından hazırlanan bir anime serisi uyarlaması Temmuz-Eylül 2017 tarihleri arasında yayınlandı.</p>
+                        <ul class="mngBolum">
+                            <li><a href="mngBolum.html">Bölüm 4</a></li>
+                            <li><a href="mngBolum.html">Bölüm 3</a></li>
+                            <li><a href="mngBolum.html">Bölüm 2</a></li>
+                            <li><a href="mngBolum.html">Bölüm 1</a></li>
+                        </ul>
+                    </aside>
+                    <aside class="mngrsm"><a href="mngBolum.html"><img src="res/MadeİnAbyssKapak.jpg" alt=""></a></aside>
+                </article>
+                <hr color="#170101">
+                <article>
+                    <aside class="yazi">
+                        <h1 class="mngBaslik"> <a href="mngBolum.html" style="text-decoration: none; color: white;">JUUJİKA NO ROKİNİN</a></h1>
+                        <p class="tanim">“İnsanları öldürmek sorunlu bir şey mi?” Shiryu Nakatake tarafından yapılmış hain bir gerilim serisi,
+                            Shun Uruma, altıncı sınıf bir çocuk, sınıf arkadaşlarının beşi tarafından “Denek: A” olarak adlandırıp zorbalıkla beraber cehennemi yaşadı. Kendini tek sakin bulduğu an kardeşiyle, onu seviyordu, ve onu koruyan ailesinide… ta ki obeş canavar onları öldürene kadar.
+                            “KİMSENİN benim intikamımın yoluna girmesine izin vermeyeceğim.”</p>
+                        <ul class="mngBolum">
+                            <li><a href="mngBolum.html">Bölüm 4</a></li>
+                            <li><a href="mngBolum.html">Bölüm 3</a></li>
+                            <li><a href="mngBolum.html">Bölüm 2</a></li>
+                            <li><a href="mngBolum.html">Bölüm 1</a></li>
+                        </ul>
+                    </aside>
+                    <aside class="mngrsm"><a href="mngBolum.html"><img src="res/juujikaNoRokininKapak.jpg" alt=""></a></aside>
+                </article>
+            </aside>
+
+            <aside id="sayfa">
+                <a href="mngBolum.html">1</a>
+                <a href="mngBolum.html">2</a>
+                <a href="mngBolum.html">3</a>
+                <a href="mngBolum.html">4</a>
+                <a href="mngBolum.html">5</a>
+                <a href="mngBolum.html">6</a>
+                <a href="mngBolum.html">7</a>
+                <a href="mngBolum.html">8</a>
+                <a href="mngBolum.html">9</a>
+                <a href="mngBolum.html">10</a>
+                <a href="mngBolum.html">20</a>
+                <a href="mngBolum.html">30</a>
+                <a href="mngBolum.html">...</a>
+                <a href="mngBolum.html">son >></a>
+            </aside>
+        </section>
+        <footer ><h1>Not
+            Bu sitedeki mangaları daha kolay okuyabilmeniz için türkçe paylaşmaya çalışıyoruz. Burada gördüğünüz mangalardan herhangi birini beğendiyseniz ve satışta mevcutsa, yayıncıyı desteklemek için satın almanızı rica ediyoruz. Herhangi bir konuda bizimle iletişime geçmek için sitemizdeki iletişim formundan ulaşabilirsiniz.</h1></footer>
+    </div>
+</body>
+</html>
